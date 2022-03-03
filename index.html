@@ -11,12 +11,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8"/>
     <link rel="stylesheet" href="./style.css" />
     <title>Rock,Paper,Scissors</title>
   </head>
   <body>
     <sidebar class="side-bar" id="sidebarOne">
+      <p class="human-icon">‍👩‍🎤</p>
       <h2 class="human-sidebar">Human</h2>
       <div class="score-count">Wins:
       <label id="humanScore">0</label>
@@ -54,9 +55,10 @@
       </article>
     </main>
     <sidebar class="side-bar" id="sidebarTwo">
-      <h2 class="computer-sidebar">Computer</h2>
+        <p class="robot-icon">‍‍🤖</p>
+      <h2 class="robot-sidebar">Robot</h2>
       <div class="score-count">Wins:
-      <label id="compScore">0</label>
+      <label id="robotScore">0</label>
     </sidebar>
     <script src="./player.js"></script>
     <script src="./game.js"></script>

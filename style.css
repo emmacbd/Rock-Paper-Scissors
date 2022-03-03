@@ -50,3 +50,23 @@ sidebar {
   text-align: center;
   background-color: #ABF7FF;
 }
+
+.human-icon {
+  margin-top: 20%;
+  font-size: 40px;
+}
+
+.robot-icon {
+  margin-top: 20%;
+  font-size: 40px;
+}
+
+#sidebarOne {
+  margin-left: -5%;
+  margin-top: -6%;
+}
+
+#sidebarTwo{
+  margin-right: -5%;
+  margin-top: -6%;
+}
