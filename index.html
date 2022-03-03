@@ -1,0 +1,67 @@
+<!-- //1-build-skeleton
+2-create-player
+3-create-game
+4-console-play
+5-dom-play
+6-Connect-data-to-dom
+7-Display-player-sidebar
+8-reset-game
+9-Extension - persist-player-data
+10-README -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8"/>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Rock,Paper,Scissors</title>
+  </head>
+  <body>
+    <sidebar class="side-bar" id="sidebarOne">
+      <p class="human-icon">‍👩‍🎤</p>
+      <h2 class="human-sidebar">Human</h2>
+      <div class="score-count">Wins:
+      <label id="humanScore">0</label>
+      </div>
+     </sidebar>
+    <main>
+      <h1 class="page-title">Rock, Paper, Scissors</h1>
+        <h2 class="sub-header">Choose Your Game!</h2>
+        <h2 hidden class="sub-header" id="fighterTitle">Choose Your Fighter!</h2>
+      <article class="choice-container">
+        <div class="choice-box">
+        <h3 class="choice-header">Classic</h3> <p>sapphire > fingers</p>
+        <p>crane > sapphire</p>
+        <p>fingers > crane</p>
+        </div>
+        <div class="choice-box">  <h3 class="choice-header">Difficult</h3>
+        <p>sapphire > fingers & unicorn</p>
+        <p>crane > sapphire & star</p>
+        <p>fingers > crane & unicorn</p>
+        <p>unicorn > crane & star</p>
+        <p>star > fingers & sapphire</p>
+        </div>
+        </article>
+      <article hidden class="fighter-box" id="classicFighterBox">
+        <div class="fighter" id="sapphire"><img src="./images/sapphire.png" alt="sapphire icon"></div>
+        <div class="fighter" id="crane"><img src="./images/crane.png" alt="crane icon"></div>
+        <div class="fighter" id="finger"><img src="./images/fingers.png"alt="fingers icon"></div>
+      </article>
+      <article hidden class="fighter-box" id="hardFighterBox">
+          <div class="fighter" id="sapphire"><img src="./images/sapphire.png"alt="sapphire icon"></div>
+          <div class="fighter" id="crane"><img src="./images/crane.png"alt="crane icon"></div>
+          <div class="fighter" id="fingers"><img src="./images/fingers.png"alt="fingers icon"></div>
+          <div class="fighter" id="unicorn"><img src="./images/unicorn.png" alt="Unicorn icon"></div>
+          <div class="fighter" id="star"><img src="./images/shooting-star.png"alt="star icon"></div>
+      </article>
+    </main>
+    <sidebar class="side-bar" id="sidebarTwo">
+        <p class="robot-icon">‍‍🤖</p>
+      <h2 class="robot-sidebar">Robot</h2>
+      <div class="score-count">Wins:
+      <label id="robotScore">0</label>
+    </sidebar>
+    <script src="./player.js"></script>
+    <script src="./game.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>
