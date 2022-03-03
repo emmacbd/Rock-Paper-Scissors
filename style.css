@@ -37,6 +37,22 @@ h2{
   cursor: pointer;
 }
 
+#classicFighterBox {
+  margin-top: 12%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#hardFighterBox {
+  margin-top: 12%;
+  display: flex;
+  justify-content: space-evenly;
+}
+img {
+cursor: pointer;
+max-width: 100px;
+}
+
 p {
   text-align: inherit;
   padding : 0;
