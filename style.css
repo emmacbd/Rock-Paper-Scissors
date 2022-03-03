@@ -1,0 +1,52 @@
+/* * {
+  border: 2px solid blue;
+} */
+
+body{
+  height: 100vh;
+  display:grid;
+  grid-template-columns: 20% 60% 20%;
+  background-color: #FFBDE6;
+}
+
+h1{
+  font-family: “Montserrat”, sans-serif;
+  text-align: center;
+}
+
+h2{
+  font-family: “Montserrat”, sans-serif;
+  text-align: center;
+}
+
+.choice-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.choice-box {
+  margin: 5%;
+  text-align: center;
+  font-family: “Montserrat”, sans-serif;
+  border-radius: 4%;
+  background-color: #E6DBFF;
+  width: 40%;
+  height: 30%;
+  padding-bottom: 4%;
+  cursor: pointer;
+}
+
+p {
+  text-align: inherit;
+  padding : 0;
+  margin : 0;
+  line-height : 20px;
+}
+
+sidebar {
+  font-family: “Montserrat”, sans-serif;
+  padding: 10px;
+  text-align: center;
+  background-color: #ABF7FF;
+}
