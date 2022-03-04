@@ -110,12 +110,12 @@ sidebar {
   font-size: 40px;
 }
 
-.fighter{
+.fighter {
   display:none;
 }
 
 .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 /* //put button around section, need transition property then

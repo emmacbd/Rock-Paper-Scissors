@@ -22,10 +22,12 @@ class Game {
   }
 
   chooseGame(gameType){
-    if(gameType === "classic"){
-    // var fighterChoices = ["sapphire", "crane", "fingers"]
-    } else {
-    var difficultFighterChoices = this.fighterChoices.push("unicorn", "star")
+    if(gameType === "difficultChoice"){
+      this.gameType = "difficult";
+      this.fighterChoices.push("unicorn", "star")
+    } else if (gameType === "classic"){
+      this.gameType = "classic";
+      this.fighterChoices = ["sapphire", "crane", "fingers"];
     }
   }
 
