@@ -4,18 +4,23 @@ class Player {
     this.icon = icon;
     this.wins = wins;
   }
-  takeTurn(){
+
+
+  takeTurn(fighterChoice){
 
   }
 }
+  var fighterChoices = ["sapphire", "crane", "fingers"]
+  var robotChoice = choices[math.floor(math.random() * 3)]
 
-//humanChoice = [sapphire, fingers, crane]
-//robotChoice = [sapphire, fingers, crane]
+
+//humanChoice = ["sapphire", "fingers", "crane"]
+//var choices = ["sapphire", "fingers", "crane"]
 
 //if humanchoice === robotChoice
 //return "It's a draw! Try again!"
 //
-//computerChoice = 
+//computerChoice = choices[Math.floor(Math.random() * 3)]
 //if humanChoice === sapphire && robotChoice === fingers
 //return "Human won this round!"
 //if humanChoice === fingers && robotChoice === crane
@@ -27,9 +32,3 @@ class Player {
 // sapphire > fingers
 // crane > sapphire
 // fingers > crane
-
-// Player methods must include, but are not limited to:
-// constructor - properties should include: name (ex: 'Human'), token (ex: '👩🏻'), wins (ex: 0)
-// saveWinsToStorage - only necessary if you choose the localStorage extension
-// retrieveWinsFromStorage - only necessary if you choose the localStorage extension
-// takeTurn
