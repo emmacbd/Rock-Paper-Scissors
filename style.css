@@ -9,13 +9,9 @@ body{
   background-color: #FFBDE6;
 }
 
-h1{
-  font-family: “Montserrat”, sans-serif;
-  text-align: center;
-}
-
-h2{
-  font-family: “Montserrat”, sans-serif;
+h1, h2{
+  margin-top:5%;
+  font-family: 'Shippori Antique B1', sans-serif;
   text-align: center;
 }
 
@@ -28,32 +24,46 @@ h2{
 .choice-box {
   margin: 5%;
   text-align: center;
-  font-family: “Montserrat”, sans-serif;
+  font-family: 'Shippori Antique B1', sans-serif;
   border-radius: 4%;
   background-color: #E6DBFF;
   width: 40%;
   height: 30%;
   padding-bottom: 4%;
   cursor: pointer;
+  opacity: 1;
+}
+
+.choice-box:hover{
+  opacity: 0.75;
 }
 
 #classicFighterBox {
-  margin-top: 12%;
+  margin-top: 8%;
   display: flex;
   justify-content: space-evenly;
+  margin-right: 10%;
+  margin-left: 10%;
+  flex-wrap: wrap;
 }
 
-#hardFighterBox {
-  margin-top: 12%;
+#hardFighterBox{
+  margin-top: -3%;
   display: flex;
   justify-content: space-evenly;
+  margin-right: 16%;
+  margin-left: 16%;
+  flex-wrap: wrap;
 }
+
 img {
 cursor: pointer;
-max-width: 100px;
+max-width: 150px;
+margin-top: 20%;
 }
 
 p {
+  font-size: 15px;
   text-align: inherit;
   padding : 0;
   margin : 0;
@@ -61,19 +71,31 @@ p {
 }
 
 sidebar {
-  font-family: “Montserrat”, sans-serif;
+  font-family: 'Shippori Antique B1', sans-serif;
   padding: 10px;
   text-align: center;
   background-color: #ABF7FF;
 }
 
-.human-icon {
-  margin-top: 20%;
-  font-size: 40px;
+.change-game-button {
+    opacity: 1;
+    cursor: pointer;
+    font-family: 'Shippori Antique B1', sans-serif;
+    background-color: #E6DBFF;
+    border-radius: 4%;
+    margin: 35%;
+    font-size: 18px;
+    height: 6%;
+    width: 69%;
+    margin-left: 14%;
 }
 
-.robot-icon {
-  margin-top: 20%;
+.change-game-button:hover {
+  opacity: 0.75;
+}
+
+.human-icon, .robot-icon {
+  margin-top: 35%;
   font-size: 40px;
 }
 
@@ -85,4 +107,21 @@ sidebar {
 #sidebarTwo{
   margin-right: -5%;
   margin-top: -6%;
+}
+
+.fighter{
+  display:none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* //put button around section, need transition property then
+ .hard-fighter{
+  display:none;
+}
+
+.hidden {
+  display: none;
 }

@@ -13,53 +13,57 @@
   <head>
     <meta charset="UTF-8"/>
     <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap" rel="stylesheet">
     <title>Rock,Paper,Scissors</title>
   </head>
   <body>
     <sidebar class="side-bar" id="sidebarOne">
-      <p class="human-icon">‍👩‍🎤</p>
-      <h2 class="human-sidebar">Human</h2>
-      <div class="score-count">Wins:
-      <label id="humanScore">0</label>
-      </div>
-     </sidebar>
+        <p class="human-icon">‍👩‍🎤</p>
+        <h2 class="human-sidebar">Human</h2>
+        <div class="score-count">Wins:
+        <label id="humanScore">0</label>
+        </div>
+        <button class="change-game-button hidden">Change Game?</button>
+      </sidebar>
     <main>
-      <h1 class="page-title">Rock, Paper, Scissors</h1>
-        <h2 hidden class="sub-header">Choose Your Game!</h2>
-        <h2  class="sub-header" id="fighterTitle">Choose Your Fighter!</h2>
-      <article hidden class="choice-container">
-        <div hidden class="choice-box">
+        <h1 class="page-title">Rock, Paper, Scissors</h1>
+        <h2 class="sub-header hidden" id="gameTitle">Choose Your Game!</h2>
+        <h2 class="sub-header" id="fighterTitle">Choose Your Fighter!</h2>
+      <article class="choice-container hidden">
+        <button class="choice-box">
         <h3 class="choice-header">Classic</h3> <p>sapphire > fingers</p>
         <p>crane > sapphire</p>
         <p>fingers > crane</p>
-        </div>
-        <div hidden class="choice-box">  <h3 class="choice-header">Difficult</h3>
+        </button>
+        <button class="choice-box">  <h3 class="choice-header">Difficult</h3>
         <p>sapphire > fingers & unicorn</p>
         <p>crane > sapphire & star</p>
         <p>fingers > crane & unicorn</p>
         <p>unicorn > crane & star</p>
         <p>star > fingers & sapphire</p>
-        </div>
-        </article>
-      <article class="fighter-box" id="classicFighterBox">
-        <div hidden class="fighter" id="sapphire"><img src="./images/sapphire.png" alt="sapphire icon"></div>
-        <div hidden class="fighter" id="crane"><img src="./images/crane.png" alt="crane icon"></div>
-        <div hidden class="fighter" id="finger"><img src="./images/fingers.png"alt="fingers icon"></div>
+        </button>
       </article>
-      <article class="fighter-box" id="hardFighterBox">
-          <div class="fighter" id="sapphire"><img src="./images/sapphire.png"alt="sapphire icon"></div>
-          <div class="fighter" id="crane"><img src="./images/crane.png"alt="crane icon"></div>
-          <div class="fighter" id="fingers"><img src="./images/fingers.png"alt="fingers icon"></div>
-          <div class="fighter" id="unicorn"><img src="./images/unicorn.png" alt="Unicorn icon"></div> 
-          <div class="fighter" id="star"><img src="./images/shooting-star.png"alt="star icon"></div>
+     <article class="fighter-box" id="classicFighterBox">
+        <div class="fighter" id="sapphire"><img src="./images/sapphire.png" alt="sapphire icon"></div>
+        <div class="fighter" id="crane"><img src="./images/crane.png" alt="crane icon"></div>
+        <div class="fighter" id="finger"><img src="./images/fingers.png"alt="fingers icon"></div>
+      </article>
+     <article class="fighter-box hidden" id="hardFighterBox">
+        <div class="hard-fighter" id="sapphire"><img src="./images/sapphire.png"alt="sapphire icon"></div>
+        <div class="hard-fighter" id="crane"><img src="./images/crane.png"alt="crane icon"></div>
+        <div class="hard-fighter" id="fingers"><img src="./images/fingers.png"alt="fingers icon"></div>
+        <div class="hard-fighter" id="unicorn"><img src="./images/unicorn.png" alt="Unicorn icon"></div>
+        <div class="hard-fighter" id="star"><img src="./images/shooting-star.png"alt="star icon"></div>
       </article>
     </main>
-    <sidebar class="side-bar" id="sidebarTwo">
+     <sidebar class="side-bar" id="sidebarTwo">
         <p class="robot-icon">‍‍🤖</p>
-      <h2 class="robot-sidebar">Robot</h2>
-      <div class="score-count">Wins:
-      <label id="robotScore">0</label>
-    </sidebar>
+        <h2 class="robot-sidebar">Robot</h2>
+        <div class="score-count">Wins:
+        <label id="robotScore">0</label>
+      </sidebar>
     <script src="./player.js"></script>
     <script src="./game.js"></script>
     <script src="./main.js"></script>
