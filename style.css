@@ -116,6 +116,7 @@ sidebar {
 
 .hidden {
   visibility: hidden;
+  display: none;
 }
 
 /* //put button around section, need transition property then

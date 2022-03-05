@@ -30,6 +30,7 @@ function changeGameType(){
   var gameTypeChoice = event.currentTarget.id;
   console.log(gameTypeChoice);
   currentGame.chooseGame(gameTypeChoice);
+  displayFighters();
 }
 
 function displayFighters(){
