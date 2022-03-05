@@ -50,10 +50,10 @@ h1, h2{
 #hardFighterBox{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: -3%;
+  margin-top: -30%;
 }
 
 img {
@@ -111,14 +111,5 @@ sidebar {
 
 .hidden {
   visibility: hidden;
-  display: none;
-}
-
-/* //put button around section, need transition property then
- .hard-fighter{
-  display:none;
-}
-
-.hidden {
   display: none;
 }

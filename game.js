@@ -38,10 +38,6 @@ class Game {
     var robotChoice = this.robot.choice;
     var humanChoice = this.human.choice;
     console.log(robotChoice, humanChoice);
-
-
-    //CLASSIC RULES//
-    //
     //DRAW RULES
     //if(humanchoice === robotChoice)
     //
@@ -55,7 +51,8 @@ class Game {
       this.winner = "human";
       this.winningPhrase = `${this.human.icon}Human won this  round!${this.human.icon}`
   }
-
+}
+}
     //COMPUTER WINS
     //if(robotChoice === "sapphire" && humanChoice === "fingers")
     //robot.wins += 1
@@ -76,7 +73,7 @@ class Game {
     //human.wins +=1
     //return "Human won this round!"
 
-    if(humanChoice === "crane" && computerChoice === "sapphire" || "star"
+    // if(humanChoice === "crane" && computerChoice === "sapphire" || "star"
     //human.wins +=1
     //return "Human won this round!"
     // if(humanChoice === "fingers" && computerChoice === ("crane" || "unicorn")
@@ -90,12 +87,9 @@ class Game {
     //return "Human won this round!"
   //
   //console.log(this.winner);
-
-
-
-    }
-  resetGame(){
-
-  }
-
-}
+// 
+//   resetGame(){
+//
+//   }
+//
+// }
