@@ -57,15 +57,14 @@ function displayFighters(){
 }
   function playGame(){
     var fighterChoice = event.target.closest(".fighter").id;
-    console.log(fighterChoice);
     currentGame.determineWinner(fighterChoice);
+    displayWinner();
   }
 
 function displayWinner(){
-  currentGame.determineWinner(fighterChoice)
-
   subHeader.classList.add("hidden");
   winnerBanner.classList.toggle("hidden");
   winnerBanner.innerHTML = currentGame.winningPhrase;
-    //display human and computer fighter choice
+  //display currentGame.human.choice
+  //display currentGame.robot.choice
 }

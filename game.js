@@ -39,9 +39,6 @@ class Game {
     var humanChoice = this.human.choice;
     console.log(robotChoice, humanChoice);
 
-    if(humanChoice === robotChoice)
-      this.winningPhrase = "It's a tie! Try again!"
-
     var humanWins = humanChoice === "sapphire" && robotChoice === "fingers"
                  || humanChoice === "fingers" && robotChoice === "crane"
                  || humanChoice === "crane" && robotChoice === "sapphire"
@@ -56,11 +53,14 @@ class Game {
                  || robotChoice === "fingers" && humanChoice === "unicorn"
                  || robotChoice === "crane" && humanChoice === "star"
 
+    if(humanChoice === robotChoice){
+      this.winningPhrase = "It's a tie! Try again!"
+    }
     if (humanWins){
       this.human.wins +=1;
       this.winner = "human";
       this.winningPhrase = `${this.human.icon} Human won this round! ${this.human.icon}`
-
+    }
     if (robotWins){
       this.robot.wins +=1;
       this.winner = "robot";
@@ -68,4 +68,3 @@ class Game {
       }
     }
   }
-}
