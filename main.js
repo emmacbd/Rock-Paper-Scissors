@@ -1,7 +1,10 @@
 
 //GLOBAL VARIABLES//
 var currentGame = new Game();
+
 //QUERY SELECTORS//
+var classicBox = document.querySelector("#classicFighterBox");
+var difficultBox = document.querySelector("#hardFighterBox");
 var classicButton = document.querySelector("#classicChoice");
 var difficultButton = document.querySelector("#difficultChoice");
 var changeGameButton = document.querySelector(".change-game-button");
@@ -10,11 +13,14 @@ var craneIcon = document.querySelector("#crane");
 var fingerIcon = document.querySelector("#finger");
 var unicornIcon = document.querySelector("#unicorn");
 var starIcon = document.querySelector("#star");
+var headerSpan = document.querySelector("span");
 
+//EVENT LISTENERS//
 window.addEventListener("load", displayGames);
-classicButton.addEventListener("click", changeGameType)
-difficultButton.addEventListener("click",changeGameType)
+classicButton.addEventListener("click", changeGameType);
+difficultButton.addEventListener("click",changeGameType);
 
+//FUNCTIONS//
 function displayGames(){
   //show classic and difficult buttons
   //localstorage wins persisting
@@ -27,15 +33,15 @@ function changeGameType(){
 }
 
 function displayFighters(){
-  //current
-  //display changeGameButton
-  //display fighter header
-  //add hidden game header
-  //add hidden classicChoice button
-  //add hidden difficultChoice button
+  headerSpan.innerText = "Fighter";
+
+  changeGameButton.classList.toggle("hidden");
+  classicButton.classList.toggle("hidden");
+  difficultChoice.classList.toggle("hidden");
+
   if(currentGame.gameType === "classic"){
-    //display/remove hidden #classicFighterBox
+    difficultBox.classList.toggle("hidden")
   }else if(currentGame.gameType === "difficult"){
-    //display/remove hidden #hardFighterBox
+    classicBox.classList.toggle("hidden")
   }
 }
