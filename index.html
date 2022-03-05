@@ -28,21 +28,25 @@
         <button class="change-game-button hidden">Change Game?</button>
       </sidebar>
     <main>
-        <h1 class="page-title">Rock, Paper, Scissors</h1>
-        <h2 class="sub-header hidden" id="gameTitle">Choose Your Game!</h2>
-        <h2 class="sub-header" id="fighterTitle">Choose Your Fighter!</h2>
-      <article class="choice-container hidden">
-        <button class="choice-box">
-        <h3 class="choice-header">Classic</h3> <p>sapphire > fingers</p>
-        <p>crane > sapphire</p>
-        <p>fingers > crane</p>
+      <header class="header">
+        <h1 class="page-title">Rock, Paper, Scissors!</h1>
+        <h2 class="sub-header">Choose Your <span>Game</span>!</h2>
+        <h3 class="winner-banner hidden"></h3>
+      </header>
+      <article class="choice-container">
+        <button class="choice-box" id="classicChoice">
+          <h3 class="choice-header">Classic</h3>
+            <p>sapphire > fingers</p>
+            <p>crane > sapphire</p>
+            <p>fingers > crane</p>
         </button>
-        <button class="choice-box">  <h3 class="choice-header">Difficult</h3>
-        <p>sapphire > fingers & unicorn</p>
-        <p>crane > sapphire & star</p>
-        <p>fingers > crane & unicorn</p>
-        <p>unicorn > crane & star</p>
-        <p>star > fingers & sapphire</p>
+        <button class="choice-box" id="difficultChoice">
+          <h3 class="choice-header">Difficult</h3>
+            <p>sapphire > fingers & unicorn</p>
+            <p>crane > sapphire & star</p>
+            <p>fingers > crane & unicorn</p>
+            <p>unicorn > crane & star</p>
+            <p>star > fingers & sapphire</p>
         </button>
       </article>
      <article class="fighter-box" id="classicFighterBox">
