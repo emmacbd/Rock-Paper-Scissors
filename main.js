@@ -14,7 +14,9 @@ var fingerIcon = document.querySelector("#finger");
 var unicornIcon = document.querySelector("#unicorn");
 var starIcon = document.querySelector("#star");
 var fighterBoxes = document.querySelector(".fighter-boxes");
+var subHeader = document.querySelector(".sub-header");
 var headerSpan = document.querySelector("span");
+var winnerBanner = document.querySelector(".winner-banner");
 
 //EVENT LISTENERS//
 window.addEventListener("load", displayGames);
@@ -25,7 +27,6 @@ changeGameButton.addEventListener("click", displayGames)
 
 //FUNCTIONS//
 function displayGames(){
-  var currentGame = new Game();
   difficultButton.classList.remove("hidden");
   classicButton.classList.remove("hidden");
   changeGameButton.classList.add("hidden");
@@ -37,14 +38,6 @@ function changeGameType(){
   var gameTypeChoice = event.currentTarget.id;
   currentGame.chooseGame(gameTypeChoice);
   displayFighters();
-}
-
-function playGame(){
-  var fighterChoice = event.target.closest(".fighter").id;
-  console.log(fighterChoice);
-  currentGame.determineWinner(fighterChoice);
-  //queryselect winnerbanner, innerHTML = currentGame.winningPhrase
-  //player.icon
 }
 
 function displayFighters(){
@@ -61,4 +54,18 @@ function displayFighters(){
     classicFighters.classList.add("hidden")
     difficultFighters.classList.remove("hidden")
   }
+}
+  function playGame(){
+    var fighterChoice = event.target.closest(".fighter").id;
+    console.log(fighterChoice);
+    currentGame.determineWinner(fighterChoice);
+  }
+
+function displayWinner(){
+  currentGame.determineWinner(fighterChoice)
+
+  subHeader.classList.add("hidden");
+  winnerBanner.classList.toggle("hidden");
+  winnerBanner.innerHTML = currentGame.winningPhrase;
+    //display human and computer fighter choice
 }
