@@ -45,7 +45,6 @@ h1, h2{
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 8%;
-
 }
 
 #hardFighterBox{
@@ -108,10 +107,6 @@ sidebar {
 .human-icon, .robot-icon {
   margin-top: 35%;
   font-size: 40px;
-}
-
-.fighter {
-  display:none;
 }
 
 .hidden {

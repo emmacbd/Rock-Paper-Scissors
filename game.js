@@ -18,7 +18,8 @@ class Game {
     this.human = new Player("human", "👩‍🎤");
     this.robot = new Player("robot", "🤖");
     this.fighterChoices = ["sapphire", "crane", "fingers"];
-    // this.winner = " " ;
+    this.winner = " " ;
+    this.winningPhrase = " ";
   }
 
   chooseGame(gameType){
@@ -36,7 +37,7 @@ class Game {
     this.human.takeTurn(humanChoice,"")
     var robotChoice = this.robot.choice;
     var humanChoice = this.human.choice;
-  //
+    console.log(robotChoice, humanChoice);
 
 
     //CLASSIC RULES//
@@ -45,17 +46,15 @@ class Game {
     //if(humanchoice === robotChoice)
     //
     //return "It's a draw! Try again!"
+    var humanWins = humanChoice === "sapphire" && robotChoice === "fingers"
+      || humanChoice === "fingers" && robotChoice === "crane"
+      || humanChoice === "crane" && robotChoice === "sapphire"
 
-    //HUMAN WINS
-    //if (humanChoice === "sapphire" && robotChoice === "fingers")
-    //human.wins +=1
-    //return "Human won this round!"
-    //if humanChoice === "fingers" && robotChoice === "crane")
-    //human.wins +=1
-    //return "Human won this round!"
-    //if(humanChoice === "crane" && robotChoice === "sapphire")
-    //human.wins +=1
-    //return "Human won this round!"
+    if (humanWins){
+      this.human.wins +=1;
+      this.winner = "human";
+      this.winningPhrase = `${this.human.icon}Human won this  round!${this.human.icon}`
+  }
 
     //COMPUTER WINS
     //if(robotChoice === "sapphire" && humanChoice === "fingers")
@@ -76,7 +75,8 @@ class Game {
     // if(humanChoice === "sapphire" && computerChoice === ("fingers" || "unicorn")
     //human.wins +=1
     //return "Human won this round!"
-    // if(humanChoice === "crane" && computerChoice === ("sapphire" || "star")
+
+    if(humanChoice === "crane" && computerChoice === "sapphire" || "star"
     //human.wins +=1
     //return "Human won this round!"
     // if(humanChoice === "fingers" && computerChoice === ("crane" || "unicorn")
@@ -88,6 +88,11 @@ class Game {
     // if(humanChoice === "star" === && computerChoice === ("fingers" || "sapphire")
     //human.wins +=1
     //return "Human won this round!"
+  //
+  //console.log(this.winner);
+
+
+
     }
   resetGame(){
 
