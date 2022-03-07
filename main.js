@@ -3,8 +3,8 @@
 var currentGame = new Game();
 
 //QUERY SELECTORS//
-var classicBox = document.querySelector("#classicFighterBox");
-var difficultBox = document.querySelector("#hardFighterBox");
+var classicFighters = document.querySelector("#classicFighterBox");
+var difficultFighters = document.querySelector("#hardFighterBox");
 var classicButton = document.querySelector("#classicChoice");
 var difficultButton = document.querySelector("#difficultChoice");
 var changeGameButton = document.querySelector(".change-game-button");
@@ -13,22 +13,29 @@ var craneIcon = document.querySelector("#crane");
 var fingerIcon = document.querySelector("#finger");
 var unicornIcon = document.querySelector("#unicorn");
 var starIcon = document.querySelector("#star");
+var fighterBoxes = document.querySelector(".fighter-boxes");
+var subHeader = document.querySelector(".sub-header");
 var headerSpan = document.querySelector("span");
+var winnerBanner = document.querySelector(".winner-banner");
 
 //EVENT LISTENERS//
 window.addEventListener("load", displayGames);
 classicButton.addEventListener("click", changeGameType);
 difficultButton.addEventListener("click",changeGameType);
+fighterBoxes.addEventListener("click", playGame);
+changeGameButton.addEventListener("click", displayGames)
 
 //FUNCTIONS//
 function displayGames(){
+  difficultButton.classList.remove("hidden");
+  classicButton.classList.remove("hidden");
+  changeGameButton.classList.add("hidden");
   //show classic and difficult buttons
   //localstorage wins persisting
 }
 
 function changeGameType(){
   var gameTypeChoice = event.currentTarget.id;
-  console.log(gameTypeChoice);
   currentGame.chooseGame(gameTypeChoice);
   displayFighters();
 }
@@ -36,13 +43,28 @@ function changeGameType(){
 function displayFighters(){
   headerSpan.innerText = "Fighter";
 
-  changeGameButton.classList.toggle("hidden");
+  changeGameButton.classList.remove("hidden");
   classicButton.classList.toggle("hidden");
-  difficultChoice.classList.toggle("hidden");
+  difficultButton.classList.toggle("hidden");
 
   if(currentGame.gameType === "classic"){
-    difficultBox.classList.toggle("hidden")
-  }else if(currentGame.gameType === "difficult"){
-    classicBox.classList.toggle("hidden")
+    classicFighters.classList.remove("hidden")
+    difficultFighters.classList.add("hidden")
+  } else if(currentGame.gameType === "difficult"){
+    classicFighters.classList.add("hidden")
+    difficultFighters.classList.remove("hidden")
   }
+}
+  function playGame(){
+    var fighterChoice = event.target.closest(".fighter").id;
+    currentGame.determineWinner(fighterChoice);
+    displayWinner();
+  }
+
+function displayWinner(){
+  subHeader.classList.add("hidden");
+  winnerBanner.classList.toggle("hidden");
+  winnerBanner.innerHTML = currentGame.winningPhrase;
+  //display currentGame.human.choice
+  //display currentGame.robot.choice
 }

@@ -9,7 +9,7 @@ body{
   height: 100vh;
 }
 
-h1, h2{
+h1, h2, h3{
   font-family: 'Shippori Antique B1', sans-serif;
   margin-top:5%;
   text-align: center;
@@ -45,16 +45,15 @@ h1, h2{
   margin-left: 10%;
   margin-right: 10%;
   margin-top: 8%;
-
 }
 
 #hardFighterBox{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-left: 15%;
   margin-right: 15%;
-  margin-top: -3%;
+  margin-top: -30%;
 }
 
 img {
@@ -110,20 +109,7 @@ sidebar {
   font-size: 40px;
 }
 
-.fighter {
-  display:none;
-}
-
 .hidden {
   visibility: hidden;
-  display: none;
-}
-
-/* //put button around section, need transition property then
- .hard-fighter{
-  display:none;
-}
-
-.hidden {
   display: none;
 }

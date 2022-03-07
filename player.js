@@ -15,21 +15,7 @@ class Player {
     if(this.name === "human"){
       this.choice = humanChoice;
   } else {
-      this.choice = choices[math.floor(math.random() * robotChoices.length)]
+      this.choice = robotChoices[Math.floor(Math.random() * robotChoices.length)]
     }
-
-    // getRobotChoice(){
-    // var robotChoice = choices[math.floor(math.random() * fighterChoices.length)]
-    // return robotChoice
-    // }
-    //just have to choose a fighter
-    //if(this.name === "robot"){
-    // var robotChoice = choices[math.floor(math.random() * fighterChoices.length)]
-    //return robotChoice
   }
 }
-  var fighterChoices = ["sapphire", "crane", "fingers"]
-  if(gameChoice === difficult){
-  var difficultFighterChoices = fighterChoices.push("unicorn", "star")
-  }
-  var robotChoice = choices[math.floor(math.random() * fighterChoices.length)]

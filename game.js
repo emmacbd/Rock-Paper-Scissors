@@ -18,7 +18,8 @@ class Game {
     this.human = new Player("human", "👩‍🎤");
     this.robot = new Player("robot", "🤖");
     this.fighterChoices = ["sapphire", "crane", "fingers"];
-    // this.winner = " " ;
+    this.winner = " " ;
+    this.winningPhrase = " ";
   }
 
   chooseGame(gameType){
@@ -36,61 +37,34 @@ class Game {
     this.human.takeTurn(humanChoice,"")
     var robotChoice = this.robot.choice;
     var humanChoice = this.human.choice;
-  //
+    console.log(robotChoice, humanChoice);
 
+    var humanWins = humanChoice === "sapphire" && robotChoice === "fingers"
+                 || humanChoice === "fingers" && robotChoice === "crane"
+                 || humanChoice === "crane" && robotChoice === "sapphire"
+                 || humanChoice === "sapphire" && robotChoice === "unicorn"
+                 || humanChoice === "fingers" && robotChoice === "unicorn"
+                 || humanChoice === "crane" && robotChoice === "star"
 
-    //CLASSIC RULES//
-    //
-    //DRAW RULES
-    //if(humanchoice === robotChoice)
-    //
-    //return "It's a draw! Try again!"
+    var robotWins = robotChoice === "sapphire" && humanChoice === "fingers"
+                 || robotChoice === "fingers" && humanChoice === "crane"
+                 || robotChoice === "crane" && humanChoice === "sapphire"
+                 || robotChoice === "sapphire" && humanChoice === "unicorn"
+                 || robotChoice === "fingers" && humanChoice === "unicorn"
+                 || robotChoice === "crane" && humanChoice === "star"
 
-    //HUMAN WINS
-    //if (humanChoice === "sapphire" && robotChoice === "fingers")
-    //human.wins +=1
-    //return "Human won this round!"
-    //if humanChoice === "fingers" && robotChoice === "crane")
-    //human.wins +=1
-    //return "Human won this round!"
-    //if(humanChoice === "crane" && robotChoice === "sapphire")
-    //human.wins +=1
-    //return "Human won this round!"
-
-    //COMPUTER WINS
-    //if(robotChoice === "sapphire" && humanChoice === "fingers")
-    //robot.wins += 1
-    //return "Robot won this round!"
-    //if(robotChoice === "fingers" && humanChoice === "crane")
-    //robot.wins += 1
-    //return "Robot won this round!"
-    //if(robotChoice === "crane" && humanChoice === "sapphire")
-    //robot.wins += 1
-    //return "Robot won this round!"
-
-
-
-    //DIFFICULT RULES
-
-    // HUMAN WINS
-    // if(humanChoice === "sapphire" && computerChoice === ("fingers" || "unicorn")
-    //human.wins +=1
-    //return "Human won this round!"
-    // if(humanChoice === "crane" && computerChoice === ("sapphire" || "star")
-    //human.wins +=1
-    //return "Human won this round!"
-    // if(humanChoice === "fingers" && computerChoice === ("crane" || "unicorn")
-    //human.wins +=1
-    //return "Human won this round!"
-    // if(humanChoice === "unicorn" && computerChoice === ("crane" || "star")
-    //human.wins +=1
-    //return "Human won this round!"
-    // if(humanChoice === "star" === && computerChoice === ("fingers" || "sapphire")
-    //human.wins +=1
-    //return "Human won this round!"
+    if(humanChoice === robotChoice){
+      this.winningPhrase = "It's a tie! Try again!"
     }
-  resetGame(){
-
+    if (humanWins){
+      this.human.wins +=1;
+      this.winner = "human";
+      this.winningPhrase = `${this.human.icon} Human won this round! ${this.human.icon}`
+    }
+    if (robotWins){
+      this.robot.wins +=1;
+      this.winner = "robot";
+      this.winningPhrase = `${this.robot.icon} Robot won this round! ${this.robot.icon}`
+      }
+    }
   }
-
-}
