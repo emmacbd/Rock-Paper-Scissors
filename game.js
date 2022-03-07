@@ -9,9 +9,6 @@
 // A way to reset the Game’s board to begin a new game
 
 
-//
-
-
 class Game {
   constructor(){
     this.gameType = "classic";
@@ -26,7 +23,7 @@ class Game {
     if(gameType === "difficultChoice"){
       this.gameType = "difficult";
       this.fighterChoices.push("unicorn", "star")
-    } else if (gameType === "classic"){
+    } else if (gameType === "classicChoice"){
       this.gameType = "classic";
       this.fighterChoices = ["sapphire", "crane", "fingers"];
     }
@@ -37,7 +34,6 @@ class Game {
     this.human.takeTurn(humanChoice,"")
     var robotChoice = this.robot.choice;
     var humanChoice = this.human.choice;
-    console.log(robotChoice, humanChoice);
 
     var humanWins = humanChoice === "sapphire" && robotChoice === "fingers"
                  || humanChoice === "fingers" && robotChoice === "crane"
@@ -57,7 +53,7 @@ class Game {
       this.winningPhrase = "It's a tie! Try again!"
     }
     if (humanWins){
-      this.human.wins +=1;
+      this.human.wins += 1;
       this.winner = "human";
       this.winningPhrase = `${this.human.icon} Human won this round! ${this.human.icon}`
     }
@@ -67,4 +63,8 @@ class Game {
       this.winningPhrase = `${this.robot.icon} Robot won this round! ${this.robot.icon}`
       }
     }
+
+  resetGame(){
+    this.gameType;
   }
+}

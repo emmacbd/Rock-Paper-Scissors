@@ -1,6 +1,3 @@
-/* * {
-  border: 2px solid blue;
-} */
 
 body{
   background-color: #FFBDE6;
@@ -13,6 +10,12 @@ h1, h2, h3{
   font-family: 'Shippori Antique B1', sans-serif;
   margin-top:5%;
   text-align: center;
+  font-weight: bolder;
+  font-size: 23px;
+}
+
+h1{
+  font-size: 30px;
 }
 
 .choice-container{
@@ -60,6 +63,11 @@ img {
   cursor: pointer;
   margin-top: 20%;
   max-width: 150px;
+  transition: all .2s ease-in-out;
+}
+
+img:hover{
+  transform: scale(1.1);
 }
 
 p {
