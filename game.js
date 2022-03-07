@@ -9,9 +9,6 @@
 // A way to reset the Game’s board to begin a new game
 
 
-//
-
-
 class Game {
   constructor(){
     this.gameType = "classic";
@@ -67,6 +64,7 @@ class Game {
       }
     }
 
-  // resetGame(){
-  //   this.gameType
+  resetGame(){
+    this.gameType;
   }
+}

@@ -18,7 +18,13 @@ var subHeader = document.querySelector(".sub-header");
 var headerSpan = document.querySelector("span");
 var winnerBanner = document.querySelector(".winner-banner");
 var humanScore = document.querySelector("#humanScore");
-var robotScore = document.querySelector("#robotScore")
+var robotScore = document.querySelector("#robotScore");
+var humanChoice = document.querySelector(".human-choice");
+var robotChoice = document.querySelector(".robot-choice");
+var fighterChoice = document.querySelector(".fighter-choice");
+
+// var sapphireDisplay = "./images/sapphire.png"
+// var craneDisplay = "./images/crane.png"
 
 //EVENT LISTENERS//
 window.addEventListener("load", displayGames);
@@ -33,8 +39,6 @@ function displayGames(){
   classicButton.classList.remove("hidden");
   changeGameButton.classList.add("hidden");
   fighterBoxes.classList.add("hidden");
-  //show classic and difficult buttons
-  //localstorage wins persisting
 }
 
 function changeGameType(){
@@ -45,7 +49,7 @@ function changeGameType(){
 }
 
 function displayFighters(){
-  headerSpan.innerText = "Fighter";
+  headerSpan.innerText = "Fighter!";
   winnerBanner.classList.add("hidden");
   fighterBoxes.classList.remove("hidden");
   changeGameButton.classList.remove("hidden");
@@ -53,9 +57,14 @@ function displayFighters(){
   difficultButton.classList.add("hidden");
 
   if(currentGame.gameType === "classic"){
+    subHeader.classList.remove("hidden");
+    headerSpan.innerText = "Fighter!";
     classicFighters.classList.remove("hidden")
     difficultFighters.classList.add("hidden")
+
   } else if(currentGame.gameType === "difficult"){
+    subHeader.classList.remove("hidden");
+    headerSpan.innerText = "Fighter!";
     classicFighters.classList.add("hidden")
     difficultFighters.classList.remove("hidden")
   }
@@ -63,23 +72,24 @@ function displayFighters(){
   function playGame(){
     var fighterChoice = event.target.closest(".fighter").id;
     currentGame.determineWinner(fighterChoice);
-//need function showing robot choice and human choice
     displayWinner();
     updateScore();
-    setTimeout(displayFighters, 2000);
+    setTimeout(displayFighters, 1700);
   }
-
-//new function that displays current choice fighters different from displayfighters()?
-
 
 function displayWinner(){
   subHeader.classList.add("hidden");
   winnerBanner.classList.toggle("hidden");
+  fighterBoxes.classList.toggle("hidden")
   winnerBanner.innerHTML = currentGame.winningPhrase;
 
-  // currentGame.humanChoice.classList.remove("hidden");
+  //SHOW HUMAN AND ROBOT CHOICE SOMEHOW??
+  // humanChoice.innerHTML = currentGame.humanChoice;
+  // robotChoice.innerHTML = currentGame.robot.choice;
+  // // currentGame.humanChoice.classList.remove("hidden");
   // currentGame.robotChoice.classList.remove("hidden");
   // displayFighters();
+  // showHumanChoice()
 }
 
 function updateScore(){
