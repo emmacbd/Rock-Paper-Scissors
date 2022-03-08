@@ -1,5 +1,5 @@
 
-//GLOBAL VARIABLES//
+//GLOBAL VARIABLE//
 var currentGame = new Game();
 
 //QUERY SELECTORS//
@@ -31,6 +31,7 @@ function displayGames(){
   classicButton.classList.remove("hidden");
   changeGameButton.classList.add("hidden");
   fighterBoxes.classList.add("hidden");
+  headerSpan.innerText = "Game!";
 }
 
 function changeGameType(){
@@ -39,26 +40,21 @@ function changeGameType(){
   displayFighters();
 }
 
-//hide/show helper functions
-
 function displayFighters(){
   headerSpan.innerText = "Fighter!";
   winnerBanner.classList.add("hidden");
   fighterBoxes.classList.remove("hidden");
+  subHeader.classList.remove("hidden");
   changeGameButton.classList.remove("hidden");
   classicButton.classList.add("hidden");
   difficultButton.classList.add("hidden");
   fighterChoice.classList.add("hidden");
 
   if(currentGame.gameType === "classic"){
-    subHeader.classList.remove("hidden");
-    headerSpan.innerText = "Fighter!";
     classicFighters.classList.remove("hidden")
     difficultFighters.classList.add("hidden")
 
   } else if(currentGame.gameType === "difficult"){
-    subHeader.classList.remove("hidden");
-    headerSpan.innerText = "Fighter!";
     classicFighters.classList.add("hidden")
     difficultFighters.classList.remove("hidden")
   }

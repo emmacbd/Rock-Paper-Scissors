@@ -32,6 +32,8 @@ class Game {
                  || humanChoice === "crane" && robotChoice === "star"
                  || humanChoice === "unicorn" && robotChoice === "star"
                  || humanChoice === "unicorn" && robotChoice === "crane"
+                 || humanChoice === "star" && robotChoice === "fingers"
+                 || humanChoice === "star" && robotChoice === "sapphire"
 
     var robotWins = robotChoice === "sapphire" && humanChoice === "fingers"
                  || robotChoice === "sapphire" && humanChoice === "unicorn"
@@ -41,15 +43,19 @@ class Game {
                  || robotChoice === "crane" && humanChoice === "star"
                  || robotChoice === "unicorn" && humanChoice === "star"
                  || robotChoice === "unicorn" && humanChoice === "crane"
+                 || robotChoice === "star" && humanChoice === "fingers"
+                 || robotChoice === "star" && humanChoice === "sapphire"
 
     if(humanChoice === robotChoice){
       this.winningPhrase = "It's a tie! Try again!"
     }
+
     if (humanWins){
       this.human.wins += 1;
       this.winner = "human";
       this.winningPhrase = `${this.human.icon} Human won this round! ${this.human.icon}`
     }
+    
     if (robotWins){
       this.robot.wins +=1;
       this.winner = "robot";
