@@ -21,6 +21,7 @@ Do you enjoy rock, paper, scissors, but have a hard time finding someone to play
 3. Run `open index.html`.
 
 ### How to Use
+
 On page load the user sees two buttons, one describing the classic rules of rock, paper, scissors, only in this version the "fighters" are a sapphire, a paper crane, and a hand holding up two crossed fingers. The other button describes a harder version, with two additional players, a unicorn and a star, added along with their respective rules.
 
 The user can click on the version they wish to play. They will then see either the three or five icons, depending on the version they chose.
@@ -30,9 +31,9 @@ The classic rules are the same as rock, paper, scissors, only in this case rock 
 The difficult version uses the same rules as classic, but adds in a unicorn and a star
 as possible fighters. In this version, unicorn beats star and crane, and star beats fingers and sapphire.
 
-Once the user clicks on their chosen fighter, their robot opponent will also choose their fighter. The user's and the robot's chosen fighters will appear alongside each other, and the subheader will change to either declare a winner, or announce a tie.
+Once the user clicks on their chosen fighter, their robot opponent will also choose their fighter. The user's and the robot's chosen fighters will appear alongside each other, and the sub-header will change to either declare a winner, or announce a tie.
 
-Each player will gain a point for each match they win. The user can switch games and retain the scores from previous games.
+Each player will gain a point for every match they win. The user can switch games and retain the scores from previous games.
 
 To restart the score the user may refresh the page.
 
@@ -41,7 +42,6 @@ To restart the score the user may refresh the page.
 - Add other varieties of fighter characters to increase game difficulty.
 
 ### Technologies Used
-
 - JavaScript
 - HTML
 - CSS
