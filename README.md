@@ -22,7 +22,7 @@ If you grow tired of the classic version, you're in luck! You can also choose a 
 
 ### How to Set Up
 
-1.  Clone this [repo](https://github.com/emmacbd/Rock-Paper-Scissors).
+1. Clone this [repo](https://github.com/emmacbd/Rock-Paper-Scissors).
 2. `cd` into the directory.
 3. Run `open index.html`.
 
@@ -34,7 +34,8 @@ The user can click on the version they wish to play. They will then see either t
 
 The classic rules are the same as rock, paper, scissors, only in this case rock is represented by sapphire, paper is represented by a crane, and scissors, by crossed fingers.
 
-The difficult version uses the same rules as classic, but adds in a unicorn and a star as possible fighters. In this version, unicorn beats star and crane, and star beats fingers and sapphire.
+The difficult version uses the same rules as classic, but adds in a unicorn and a star
+as possible fighters. In this version, unicorn beats star and crane, and star beats fingers and sapphire.
 
 Once the user clicks on their chosen fighter, their robot opponent will also choose their fighter. The user's and the robot's chosen fighters will appear alongside each other, and the sub-header will change to either declare a winner, or announce a tie.
 
