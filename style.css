@@ -41,7 +41,7 @@ h1{
   opacity: 0.75;
 }
 
-#classicFighterBox {
+#classicFighterBox, .fighter-choice {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -59,6 +59,7 @@ h1{
   margin-top: -30%;
 }
 
+
 img {
   cursor: pointer;
   margin-top: 20%;
@@ -68,6 +69,10 @@ img {
 
 img:hover{
   transform: scale(1.1);
+}
+
+.fighter-choice{
+  pointer-events: none;
 }
 
 p {

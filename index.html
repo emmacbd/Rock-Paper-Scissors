@@ -1,18 +1,8 @@
-<!-- //1-build-skeleton
-2-create-player
-3-create-game
-4-console-play
-5-dom-play
-6-Connect-data-to-dom
-7-Display-player-sidebar
-8-reset-game
-9-Extension - persist-player-data
-10-README -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8"/>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./style.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique+B1&display=swap" rel="stylesheet">
@@ -52,25 +42,20 @@
         </button>
       </article>
       <section class="fighter-choice hidden">
-        <img class="human-choice"/>
-        <img class="robot-choice"/>
       </section>
      <section class="fighter-boxes">
-     <article class="fighter-box hidden" id="classicFighterBox">
-       <div class="icon-container">
-       </div>
-       <div cla
-        <div class="fighter" id="sapphire">
-          <img src="./images/sapphire.png" alt="sapphire icon">
-        </div>
-        <div class="fighter" id="crane">
-          <img src="./images/crane.png" alt="crane icon">
-        </div>
-        <div class="fighter" id="fingers">
-          <img src="./images/fingers.png"alt="fingers icon">
-        </div>
+       <article class="fighter-box hidden" id="classicFighterBox">
+         <div class="fighter" id="sapphire">
+           <img src="./images/sapphire.png" alt="sapphire icon">
+          </div>
+          <div class="fighter" id="crane">
+            <img src="./images/crane.png" alt="crane icon">
+          </div>
+          <div class="fighter" id="fingers">
+            <img src="./images/fingers.png"alt="fingers icon">
+          </div>
       </article>
-     <article class="fighter-box hidden" id="hardFighterBox">
+      <article class="fighter-box hidden" id="hardFighterBox">
         <div class="fighter" id="sapphire">
           <img src="./images/sapphire.png"alt="sapphire icon">
         </div>
@@ -84,17 +69,17 @@
           <img src="./images/unicorn.png" alt="Unicorn icon">
         </div>
         <div class="fighter" id="star">
-          <img src="./images/shooting-star.png"alt="star icon">
+          <img src="./images/star.png"alt="star icon">
         </div>
       </article>
-      </section>
+     </section>
     </main>
-     <sidebar class="side-bar" id="sidebarTwo">
+    <sidebar class="side-bar" id="sidebarTwo">
         <p class="robot-icon">‍‍🤖</p>
         <h2 class="robot-sidebar">Robot</h2>
         <div class="score-count">Wins:
         <label id="robotScore">0</label>
-      </sidebar>
+    </sidebar>
     <script src="./player.js"></script>
     <script src="./game.js"></script>
     <script src="./main.js"></script>
