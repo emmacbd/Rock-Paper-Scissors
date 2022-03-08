@@ -1,14 +1,3 @@
-
-
-
-// A Game should include:
-// A way to keep track of the data for the game board
-// A way to keep track of the selected game type
-// A way to check the Game’s board data for win conditions
-// A way to detect when a game is a draw (no one has won)
-// A way to reset the Game’s board to begin a new game
-
-
 class Game {
   constructor(){
     this.gameType = "classic";
@@ -36,18 +25,22 @@ class Game {
     var humanChoice = this.human.choice;
 
     var humanWins = humanChoice === "sapphire" && robotChoice === "fingers"
-                 || humanChoice === "fingers" && robotChoice === "crane"
-                 || humanChoice === "crane" && robotChoice === "sapphire"
                  || humanChoice === "sapphire" && robotChoice === "unicorn"
+                 || humanChoice === "fingers" && robotChoice === "crane"
                  || humanChoice === "fingers" && robotChoice === "unicorn"
+                 || humanChoice === "crane" && robotChoice === "sapphire"
                  || humanChoice === "crane" && robotChoice === "star"
+                 || humanChoice === "unicorn" && robotChoice === "star"
+                 || humanChoice === "unicorn" && robotChoice === "crane"
 
     var robotWins = robotChoice === "sapphire" && humanChoice === "fingers"
-                 || robotChoice === "fingers" && humanChoice === "crane"
-                 || robotChoice === "crane" && humanChoice === "sapphire"
                  || robotChoice === "sapphire" && humanChoice === "unicorn"
+                 || robotChoice === "fingers" && humanChoice === "crane"
                  || robotChoice === "fingers" && humanChoice === "unicorn"
+                 || robotChoice === "crane" && humanChoice === "sapphire"
                  || robotChoice === "crane" && humanChoice === "star"
+                 || robotChoice === "unicorn" && humanChoice === "star"
+                 || robotChoice === "unicorn" && humanChoice === "crane"
 
     if(humanChoice === robotChoice){
       this.winningPhrase = "It's a tie! Try again!"

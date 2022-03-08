@@ -1,7 +1,3 @@
-//Player methods must include, but are not limited to:
-// constructor - properties should include: name (ex: 'Human'), token (ex: '👩🏻'), wins (ex: 0)
-//takeTurn
-
 class Player {
   constructor(name, icon, ){
     this.name = name;
@@ -9,7 +5,6 @@ class Player {
     this.wins = 0;
     this.choice = " "//choice?
   }
-//true or false toggle for wins?
 
   takeTurn(humanChoice, robotChoices){
     if(this.name === "human"){

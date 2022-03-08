@@ -8,30 +8,22 @@ var difficultFighters = document.querySelector("#hardFighterBox");
 var classicButton = document.querySelector("#classicChoice");
 var difficultButton = document.querySelector("#difficultChoice");
 var changeGameButton = document.querySelector(".change-game-button");
-var sapphireIcon = document.querySelector("#sapphire");
-var craneIcon = document.querySelector("#crane");
-var fingerIcon = document.querySelector("#finger");
-var unicornIcon = document.querySelector("#unicorn");
-var starIcon = document.querySelector("#star");
 var fighterBoxes = document.querySelector(".fighter-boxes");
 var subHeader = document.querySelector(".sub-header");
 var headerSpan = document.querySelector("span");
 var winnerBanner = document.querySelector(".winner-banner");
 var humanScore = document.querySelector("#humanScore");
 var robotScore = document.querySelector("#robotScore");
-var humanChoice = document.querySelector(".human-choice");
-var robotChoice = document.querySelector(".robot-choice");
+var humanChoiceIcon = document.querySelector(".human-choice-icon");
+var robotChoiceIcon = document.querySelector(".robot-choice-icon");
 var fighterChoice = document.querySelector(".fighter-choice");
-
-// var sapphireDisplay = "./images/sapphire.png"
-// var craneDisplay = "./images/crane.png"
 
 //EVENT LISTENERS//
 window.addEventListener("load", displayGames);
 classicButton.addEventListener("click", changeGameType);
 difficultButton.addEventListener("click",changeGameType);
 fighterBoxes.addEventListener("click", playGame);
-changeGameButton.addEventListener("click", displayGames)
+changeGameButton.addEventListener("click", displayGames);
 
 //FUNCTIONS//
 function displayGames(){
@@ -43,10 +35,11 @@ function displayGames(){
 
 function changeGameType(){
   var gameTypeChoice = event.currentTarget.id;
-  console.log(gameTypeChoice);
   currentGame.chooseGame(gameTypeChoice);
   displayFighters();
 }
+
+//hide/show helper functions
 
 function displayFighters(){
   headerSpan.innerText = "Fighter!";
@@ -55,6 +48,7 @@ function displayFighters(){
   changeGameButton.classList.remove("hidden");
   classicButton.classList.add("hidden");
   difficultButton.classList.add("hidden");
+  fighterChoice.classList.add("hidden");
 
   if(currentGame.gameType === "classic"){
     subHeader.classList.remove("hidden");
@@ -69,27 +63,29 @@ function displayFighters(){
     difficultFighters.classList.remove("hidden")
   }
 }
-  function playGame(){
-    var fighterChoice = event.target.closest(".fighter").id;
-    currentGame.determineWinner(fighterChoice);
-    displayWinner();
-    updateScore();
-    setTimeout(displayFighters, 1700);
-  }
+
+function playGame(){
+  var fighterChoice = event.target.closest(".fighter").id;
+  currentGame.determineWinner(fighterChoice);
+  displayWinner();
+  updateScore();
+  setTimeout(displayFighters, 2000);
+}
 
 function displayWinner(){
   subHeader.classList.add("hidden");
-  winnerBanner.classList.toggle("hidden");
-  fighterBoxes.classList.toggle("hidden")
+  winnerBanner.classList.remove("hidden");
+  fighterBoxes.classList.add("hidden")
   winnerBanner.innerHTML = currentGame.winningPhrase;
 
-  //SHOW HUMAN AND ROBOT CHOICE SOMEHOW??
-  // humanChoice.innerHTML = currentGame.humanChoice;
-  // robotChoice.innerHTML = currentGame.robot.choice;
-  // // currentGame.humanChoice.classList.remove("hidden");
-  // currentGame.robotChoice.classList.remove("hidden");
-  // displayFighters();
-  // showHumanChoice()
+  var humanFighterChoice = `<div class="fighter"id="${currentGame.human.choice}">
+      <img src="./images/${currentGame.human.choice}.png" alt="${currentGame.human.choice} icon"></div>`;
+
+  var robotFighterChoice = `<div     class="fighter"id="${currentGame.robot.choice}">
+          <img src="./images/${currentGame.robot.choice}.png" alt="${currentGame.robot.choice} icon"></div>`;
+
+  fighterChoice.classList.remove("hidden");
+  fighterChoice.innerHTML = humanFighterChoice + robotFighterChoice;
 }
 
 function updateScore(){
