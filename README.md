@@ -9,14 +9,20 @@
 - [Contributors](#contributors)
 - [Project Specifications](#project-specifications)
 
-### Introduction
+## Introduction
+
 Do you enjoy rock, paper, scissors, but have a hard time finding someone to play with?
+
+With this app, you can test your rock, paper, scissors skills against a tireless robot opponent. In the classic version, rock is represented by a sapphire, paper by a paper crane, scissors by a pair of crossed fingers. The rules are same as the familiar school yard version, so play away!
+
+If you grow tired of the classic version, you're in luck! You can also choose a five-fighter version, which throws a unicorn and a star into the mix for an even greater chance-testing challenge!
+
 ![Rock, Paper, Scissors Gif](https://user-images.githubusercontent.com/93603551/157143145-60f83e35-986f-4c25-8846-7dd44d17d1f1.gif)
 
 
 ### How to Set Up
 
-1.  Clone this [repo](https://github.com/emmacbd/Rock-Paper-Scissors).
+1. Clone this [repo](https://github.com/emmacbd/Rock-Paper-Scissors).
 2. `cd` into the directory.
 3. Run `open index.html`.
 
