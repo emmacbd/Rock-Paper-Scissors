@@ -4,6 +4,7 @@
 - [Introduction](#introduction)
 - [How to Set Up](#how-to-set-up)
 - [How to Use](#how-to-use)
+- [Learning Goals](#learning-goals)
 - [Future Features](#future-features)
 - [Technologies Used](#technologies-used)
 - [Contributors](#contributors)
@@ -43,6 +44,15 @@ Each player will gain a point for every match they win. The user can switch game
 
 To restart the score the user may refresh the page.
 
+### Learning Goals
+1. Solidify knowledge of JavaScript concepts, particularly class-to-class interactions, by building a functional game
+2. Develop project organization skills, by breaking down project into smaller steps and re-strategizing when necessary
+3. Build confidence with basic CSS concepts, particularly grid
+
+Overall I believe I achieved my learning goals. I struggled to conceptualize how I could tie all the things I'd learned in Mod 1 to create this game, but I was able to succeed by breaking down every component into smaller, more manageable pieces, and by seeking guidance from mentors and class mates. I also made sure to take time before writing any code to make a timeline for myself, knowing that I could alter it if needed. Just having a basic framework for my workflow helped me stay on task and keep track of the many working parts of this project. Also, I struggled with CSS in previous projects and made it a goal to utilize grid for the main layout of my page.
+
+I learned so much by trial and error and I'm happy with the final product. In future projects I want to make sure to honor the planning process, as it made the actual code-writing process so much more focused and productive.
+
 ### Future Features
 - Utilize local storage to allow human and computer wins to persist on page load.
 - Add other varieties of fighter characters to increase game difficulty.
@@ -56,4 +66,4 @@ To restart the score the user may refresh the page.
 - [Emma Brooke-Davidson](https://github.com/emmacbd)
 
 ### Project Specifications
-- Project specs can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo.html).
+- This was my final solo project for Mod 1 of Turing School. Project specs can be found [here](https://frontend.turing.edu/projects/module-1/rock-paper-scissors-solo.html).
